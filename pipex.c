@@ -91,7 +91,7 @@ int	main(int ac, char **av, char **env)
 	{
 		if (pipe(pipex.fd) == -1)
 			return (-1);
-		while (env[i][0] != 'P')
+		while (env[i][0] != 'P' && env[i][1] != 'A')
 			i++;
 		pipex.path = ft_split(env[i] + 5, ':');
 		pipex.id = fork();
